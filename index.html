@@ -10,7 +10,9 @@
         <div class="popup-container" id="popup-container">
             <div id="objetivos">
                 <div id="area1-objetivos" style="display: none;">
-                    <p>Objetivos:<br>- Definen la estratategia y los proyectos para su despliegue.<br>- Diseñan como nos organizamos para llevar a cabo la estrategia definida.<br>- Evalúan si estamos logrando los resultados con efectividad.</p>
+                    <h2><b>Objetivos:</b></h2>
+                    <p><br>- Definen la estrategia y los proyectos para su despliegue.<br>- Diseñan como nos organizamos para llevar a cabo la estrategia definida.<br>- Evalúan si estamos logrando los resultados con efectividad.</p>
+                    <span class="close-button" onclick="cerrarPopup()">&#10006;</span>
                 </div>
             </div>
         </div>
@@ -19,7 +21,7 @@
             <area alt="Procesos" title="Objetivos:
             - Definen la estratategia y los proyectos para su despliegue.
             - Diseñan como nos organizamos para llevar a cabo la estrategia definida.
-            - Evalúan si estamos logrando los resultados con efectividad." href="" coords="403,9 403,43 987,45 1008,7 " shape="polygon">
+            - Evalúan si estamos logrando los resultados con efectividad." href="javascript:void(0);" coords="403,9 403,43 987,45 1008,7 " shape="polygon">
             <area target="_self" alt="Gestión de la Estrategia" title="Gestión de la Estrategia" href="gestion_estrategia.html" coords="263,54 520,55 536,86 522,112 263,112 275,86 " shape="polygon">
             <area target="_self" alt="Planeación Financiera" title="Planeación Financiera" href="planeacion_financiera.html" coords="558,54 814,57 833,85 821,112 555,116 570,85 " shape="polygon">
             <area target="_blank" alt="Gestión de Proyectos" title="Gestión de Proyectos" href="https://colcomerciocom.sharepoint.com/sites/IntranetPrincipal/Procesos/Biblioteca%20Procesos/Forms/Todos%20los%20Usuarios.aspx?RootFolder=%2Fsites%2FIntranetPrincipal%2FProcesos%2FBiblioteca%20Procesos%2FProcesos%20Planeaci%C3%B3n%20Dise%C3%B1o%20Seguimiento%2FGesti%C3%B3n%20de%20Proyectos&FolderCTID=0x0120002C14A7937B1049418C64C22894CD89E8" coords="863,55 1119,54 1138,85 1125,114 864,109 873,81 " shape="polygon">
@@ -27,20 +29,16 @@
             <area target="_self" alt="Objetivo: asfsdfasf
             sadfsfasdfas /n sdjfas" title="Gestión de Servicios Administrativos" href="gestion_servicios_administrativos.html" coords="550,683 809,683 823,712 807,740 550,740 558,712 " shape="polygon">
             <area alt="Gestión de la Efectividad" title="Gestión de la Efectividad" href="gestion_efectividad.html" coords="268,133 526,135 538,163 526,190 268,190 280,164 " shape="polygon">
-            <area alt="dfgsdfg" title="dfgsdfg" href="" coords="406,258 405,292 697,297 987,292 1011,263 700,256 " shape="polygon" onclick="mostrarObjetivos('area1')">
+            <area alt="dfgsdfg" title="dfgsdfg" href="javascript:void(0);" coords="406,258 405,292 697,297 987,292 1011,263 700,256 " shape="polygon" onclick="mostrarPopup('area1-objetivos')">
         </map>
         <script>
-            function mostrarObjetivos(areaId) {
-                // Oculta todos los objetivos
-                var objetivos = document.querySelectorAll('#objetivos > div');
-                for (var i = 0; i < objetivos.length; i++) {
-                    objetivos[i].style.display = 'none';
-                }
-                // Muestra los objetivos del área seleccionada
-                var areaObjetivos = document.querySelector('#' + areaId + '-objetivos');
-                if (areaObjetivos) {
-                    areaObjetivos.style.display = 'block';
-                }
+            function mostrarPopup(id) {
+                document.getElementById(id).style.display = "block";
+                document.getElementById("popup-container").style.display = "block";
+            }
+            function cerrarPopup() {
+                document.getElementById("popup-container").style.display = "none";
+                document.getElementById("area1-objetivos").style.display = "none";
             }
         </script>
         <script src="mageMapResizer.min.js "></script>
