@@ -9,9 +9,13 @@
     <body>
         <div class="popup-container" id="popup-container">
             <div id="objetivos">
-                <div id="area1-objetivos" style="display: none;">
+                <div id="area1-objetivos">
                     <h2><b>Objetivos:</b></h2>
-                    <p><br>- Definen la estrategia y los proyectos para su despliegue.<br>- Diseñan como nos organizamos para llevar a cabo la estrategia definida.<br>- Evalúan si estamos logrando los resultados con efectividad.</p>
+                    <p>
+                        <br>- Definen la estrategia y los proyectos para su despliegue.
+                        <br>- Diseñan como nos organizamos para llevar a cabo la estrategia definida.
+                        <br>- Evalúan si estamos logrando los resultados con efectividad.
+                    </p>
                     <span class="close-button" onclick="cerrarPopup()">&#10006;</span>
                 </div>
             </div>
@@ -31,6 +35,7 @@
             <area alt="Gestión de la Efectividad" title="Gestión de la Efectividad" href="gestion_efectividad.html" coords="268,133 526,135 538,163 526,190 268,190 280,164 " shape="polygon">
             <area alt="dfgsdfg" title="dfgsdfg" href="javascript:void(0);" coords="406,258 405,292 697,297 987,292 1011,263 700,256 " shape="polygon" onclick="mostrarPopup('area1-objetivos')">
         </map>
+        <script src="mageMapResizer.min.js "></script>
         <script>
             function mostrarPopup(id) {
                 document.getElementById(id).style.display = "block";
@@ -40,9 +45,6 @@
                 document.getElementById("popup-container").style.display = "none";
                 document.getElementById("area1-objetivos").style.display = "none";
             }
-        </script>
-        <script src="mageMapResizer.min.js "></script>
-        <script>
             imageMapResize();
         </script>
     </body>
